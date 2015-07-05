@@ -577,6 +577,7 @@ genItemArray = compileFinal str
 	["", "ACE_salineIV", 100, "item"],
 	["", "ACE_salineIV_500", 50, "item"],
 	["", "ACE_salineIV_250", 25, "item"],
+	["", "ACE_EarPlugs", 10, "item"],
 	["GPS", "ItemGPS", 100, "gps"],
 	["Toolkit", "ToolKit", 150, "item"],
 	["Mine Detector", "MineDetector", 100, "item"],

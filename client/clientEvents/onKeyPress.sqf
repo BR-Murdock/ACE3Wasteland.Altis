@@ -38,8 +38,8 @@ switch (true) do
 		showPlayerNames = if (isNil "showPlayerNames") then { true } else { !showPlayerNames };
 	};
 
-	// Earplugs - End Key
-	case (_key == 207):
+	// Earplugs - End Key / replaced with ACE earplugs
+	/*case (_key == 207):
 	{
 		if (soundVolume > 0.5) then
 		{
@@ -51,7 +51,7 @@ switch (true) do
 			0.5 fadeSound 1;
 			["You've taken out your earplugs.", 5] call mf_notify_client;
 		};
-	};
+	};*/
 };
 
 // ********** Action keys **********
