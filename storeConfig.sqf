@@ -574,6 +574,7 @@ genItemArray = compileFinal str
 	["", "ACE_fieldDressing", 25, "item"],
 	["", "ACE_morphine", 100 ,"item"],
 	["", "ACE_epinephrine", 100, "item"],
+	["", "ACE_bloodIV", 250, "item"],
 	["", "ACE_salineIV", 100, "item"],
 	["", "ACE_salineIV_500", 50, "item"],
 	["", "ACE_salineIV_250", 25, "item"],
