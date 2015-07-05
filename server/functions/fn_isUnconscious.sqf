@@ -4,5 +4,5 @@
 //	@file Name: fn_isUnconscious.sqf
 //	@file Author: AgentRev
 
-// Specific to Farooq's Revive
-_this getVariable ["FAR_isUnconscious", 0] == 1
+// Specific to ACE3
+_this getVariable ["ACE_isUnconscious", false]

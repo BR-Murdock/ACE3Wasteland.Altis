@@ -70,7 +70,7 @@ if (!isNil "_getPublicVar" && !isNil "_isConfigOn") then
 					if (!isNull _display) then
 					{
 						(_display displayCtrl 104) ctrlEnable _this; // Abort
-						(_display displayCtrl 1010) ctrlEnable _this; // Respawn
+						(_display displayCtrl 1010) ctrlEnable (_this || _unconscious); // Respawn
 					};
 				};
 
@@ -79,9 +79,11 @@ if (!isNil "_getPublicVar" && !isNil "_isConfigOn") then
 					if (call _preventAbort) then
 					{
 						with missionNamespace do { [false] spawn fn_savePlayerData };
-						false call _enableButtons;
 
 						private ["_unconscious", "_timeStamp", "_text"];
+						_unconscious = player call _isUnconscious;
+
+						false call _enableButtons;
 
 						while {call _preventAbort} do
 						{
@@ -100,6 +102,7 @@ if (!isNil "_getPublicVar" && !isNil "_isConfigOn") then
 							sleep 1;
 						};
 
+						_unconscious = player call _isUnconscious;
 						true call _enableButtons;
 						cutText ["", "PLAIN DOWN"];
 					}

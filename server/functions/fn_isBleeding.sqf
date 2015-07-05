@@ -4,5 +4,5 @@
 //	@file Name: fn_isBleeding.sqf
 //	@file Author: AgentRev
 
-// Specific to Farooq's Revive
-_this getVariable ["FAR_isStabilized", 0] == 0
+// Specific to ACE3
+[_this] call ace_medical_fnc_getBloodLoss > 0
