@@ -145,7 +145,6 @@ A3W_fnc_ace_findKiller =
 			};
 		} forEach ["_projectile", "_typeOfProjectile"];
 
-		systemChat format ["FAR_setKillerInfo - %1", [_unit, _sourceA3W, _ammoA3W]];
 		[_unit, _sourceA3W, _ammoA3W] call FAR_setKillerInfo;
 		_unit setVariable ["FAR_killerPrimeSuspect", _unit call FAR_findKiller];
 	};
