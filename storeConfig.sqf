@@ -4,6 +4,7 @@
 /*********************************************************#
 # @@ScriptName: storeConfig.sqf
 # @@Author: His_Shadow, AgentRev
+# @@Editor: BR-Murdock
 # @@Create Date: 2013-09-16 20:40:58
 #*********************************************************/
 
@@ -108,9 +109,9 @@ launcherArray = compileFinal str
 [
 	["", "launch_RPG32_F", 400],
 	["", "launch_NLAW_F", 1000], // Ammo included, one-time use
-	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 500],
-	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 500],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 500],
+//	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 500],		//Deactivating High-Tech Anti Tank Weapons
+//	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 500],
+//	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 500],
 	["Titan MPRL AA (Desert)", "launch_Titan_F", 600],
 	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 600],
 	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 600]
@@ -213,8 +214,8 @@ ammoArray = compileFinal str
 	["RPG-32 Anti-Tank Rocket", "RPG32_F", 250],              // Direct damage: high      | Splash damage: low    | Guidance: none
 	["RPG-32 High-Explosive Rocket", "RPG32_HE_F", 250],      // Direct damage: medium    | Splash damage: medium | Guidance: none
 	// ["NLAW Anti-Tank Missile", "NLAW_F", 400],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
-	["Titan Anti-Tank Missile", "Titan_AT", 350],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
-	["Titan Anti-Personnel Missile", "Titan_AP", 350],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
+	// ["Titan Anti-Tank Missile", "Titan_AT", 350],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
+	// ["Titan Anti-Personnel Missile", "Titan_AP", 350],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
 	["Titan Anti-Air Missile", "Titan_AA", 350],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 250],
@@ -575,9 +576,6 @@ genItemArray = compileFinal str
 	["", "ACE_morphine", 100 ,"item"],
 	["", "ACE_epinephrine", 100, "item"],
 	["", "ACE_bloodIV", 250, "item"],
-	["", "ACE_salineIV", 100, "item"],
-	["", "ACE_salineIV_500", 50, "item"],
-	["", "ACE_salineIV_250", 25, "item"],
 	["", "ACE_EarPlugs", 10, "item"],
 	["GPS", "ItemGPS", 100, "gps"],
 	["Toolkit", "ToolKit", 150, "item"],
