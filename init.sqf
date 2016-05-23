@@ -4,6 +4,7 @@
 //	@file Version: 1.2
 //	@file Name: init.sqf
 //	@file Author: [404] Deadbeat, [GoT] JoSchaap, AgentRev
+//	@file Editor: BR-Murdock
 //	@file Description: The main init.
 
 #define DEBUG false
