@@ -4,7 +4,7 @@ The mission is edited to have ACE, TFAR and some other Scripts integrated into t
 
 Story following 
 
-Edit done by BR Scriptteam: Zimmer, Griffin, Murdock
+Edit done by BR Scriptteam: zimm794, GriffinZS, BR-Murdock
 
 
 # A3Wasteland Altis
