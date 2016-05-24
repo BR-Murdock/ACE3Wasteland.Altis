@@ -1,0 +1,2 @@
+
+null = [WEST, false, true] execVM "JSHK_Redress\redressInit.sqf";
