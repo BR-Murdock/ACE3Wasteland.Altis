@@ -10,8 +10,8 @@ private ["_group", "_pos", "_nbUnits", "_unitTypes", "_uPos", "_unit"];
 
 _group = _this select 0;
 _pos = _this select 1;
-_nbUnits = [_this, 2, 7, [0]] call BIS_fnc_param;
-_radius = [_this, 3, 10, [0]] call BIS_fnc_param;
+_nbUnits = param [2, 7, [0]];
+_radius = param [3, 10, [0]];
 
 _unitTypes =
 [
@@ -37,7 +37,7 @@ for "_i" from 1 to _nbUnits do
 	removeHeadgear _unit;
 	removeGoggles _unit;
 
-	_unit addVest "V_PlateCarrier1_rgr";
+	_unit addVest "TRYK_V_tacSVD_OD";
 	_unit addMagazine "30Rnd_556x45_Stanag";
 	_unit addMagazine "30Rnd_556x45_Stanag";
 	_unit addMagazine "30Rnd_556x45_Stanag";
@@ -47,7 +47,7 @@ for "_i" from 1 to _nbUnits do
 		// Grenadier every 3 units
 		case (_i % 3 == 0):
 		{
-			_unit addUniform "U_B_CombatUniform_mcam_vest";
+			_unit addUniform "TRYK_U_B_OD_OD_R_CombatUniform";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
 			_unit addWeapon "arifle_TRG21_GL_F";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
@@ -56,27 +56,29 @@ for "_i" from 1 to _nbUnits do
 		// RPG every 7 units, starting from second one
 		case ((_i + 5) % 7 == 0):
 		{
-			_unit addUniform "U_B_CombatUniform_mcam_tshirt";
-			_unit addBackpack "B_Kitbag_mcamo";
+			_unit addUniform "TRYK_U_B_MARPAT_Wood_Tshirt";
+			_unit addBackpack "TRYK_B_Kitbag_Base_JSDF";
 			_unit addWeapon "arifle_TRG20_F";
-			_unit addMagazine "Titan_AT";
-			_unit addWeapon "launch_Titan_short_F";
-			_unit addMagazine "Titan_AT";
-			_unit addMagazine "Titan_AT";
+			_unit addMagazine "RPG32_HE_F";
+			_unit addWeapon "launch_RPG32_F";
+			_unit addMagazine "RPG32_F";
+			_unit addMagazine "RPG32_F";
 		};
 		// Rifleman
 		default
 		{
-			_unit addUniform "U_B_CombatUniform_mcam";
+			_unit addUniform "TRYK_U_B_JSDF_CombatUniform";
 
 			if (_unit == leader _group) then
 			{
 				_unit addWeapon "arifle_TRG21_F";
+				_unit addMagazine "HandGrenade";
 				_unit setRank "SERGEANT";
 			}
 			else
 			{
 				_unit addWeapon "arifle_TRG20_F";
+				_unit addMagazine "HandGrenade";
 			};
 		};
 	};
