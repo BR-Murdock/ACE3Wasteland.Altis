@@ -30,7 +30,7 @@ sleep 5;
 
 //Edit to exclude CIVs and support the 3 other sides.
 {
-	if (!(_x getVariable ["JSHK_doneRedress",false]) && {side _x != CIV} && {!((faction _x) in _faction)}) then
+	if (!(_x getVariable ["JSHK_doneRedress",false]) && {(side _x) != civilian} && {!((faction _x) in _faction)}) then
 	{
 		_toBeDressed pushBack _x;
 	};
