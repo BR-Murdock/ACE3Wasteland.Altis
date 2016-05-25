@@ -32,7 +32,7 @@ _continuous = [_this, 2, false, [true]] call BIS_fnc_param;
 //-----------------------------
 _indvUnitExclude = [];//<<Put individual unit's variable names here.
 _grpUnitExculde = [];//<<Put the group leader's variable names here.
-_factionExclusion = ["BLU_F"];//<<Put faction classnames here
+_factionExclusion = [];//<<Put faction classnames here
 //-----------------------------
 
 
