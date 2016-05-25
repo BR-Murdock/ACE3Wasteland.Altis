@@ -87,4 +87,16 @@ if (hasInterface || isServer) then
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
-};
+
+//AI Spawn Script Pack
+nul = [500,900,30,300,5,[1,1,1],player,0.2,1,2500,nil,["AWARE","SAD"],true] execVM "LV\ambientCombat.sqf";
+nul = [player,2,true,1,50,1,0.3,nil,nil,nil] execVM "LV\fillHouse.sqf";
+//nul = [player,3,false,1,50,1,0.1,nil,nil,nil] execVM "LV\fillHouse.sqf";
+nul = [player,0,500,[true,false],[true,false,false],false,[2,1],[1,0],0.2,nil,nil,nil] execVM "LV\militarize.sqf";
+//nul = [player,0,150,[true,true],[true,true,true],false,[10,2],[10,0],0.1,nil,nil,nil] execVM "LV\militarize.sqf";
+//nul = [player,true,3,1,true,true,player,"random",1000,true,false,8,0.1,[true,true,true,true],nil,nil,nil,true] execVM "LV\reinforcementChopper.sqf";
+nul = [player,true,1,3,true,true,player,"random",1000,true,false,6,0.3,[true,true,false,false],nil,nil,nil,true] execVM "LV\reinforcementChopper.sqf";
+//nul = [player,3,true,false,1500,"random",false,500,300,8,0.5,200,true,false,false,true,player,false,0.2,nil,nil,nil,true] execVM "LV\heliParadrop.sqf";
+nul = [player,2,false,false,1500,"random",false,600,150,6,0.5,50,true,false,true,true,player,false,0.3,nil,nil,nil,true] execVM "LV\heliParadrop.sqf";
+nul = [[1],[player],500,true,true] execVM "LV\LV_functions\LV_fnc_simpleCache.sqf";
+};;
