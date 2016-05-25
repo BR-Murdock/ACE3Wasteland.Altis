@@ -84,7 +84,7 @@ _units = [];
 
 {
 	_currentUnit = _x; 
-	if (!(side _currentUnit isEqualTo CIV) &&		//edit check if civilian
+	if ((side _currentUnit) != civilian) &&		//edit check if civilian
 	   {({_currentUnit in (units group _x)}count _grpUnitExculde isEqualTo 0)} &&
 	   {!(_currentUnit in _indvUnitExclude)} &&
 	   {!(_currentUnit getVariable ["JSHK_doneRedress",false])}) then 
