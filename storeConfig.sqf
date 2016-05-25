@@ -713,7 +713,7 @@ helicoptersArray = compileFinal str
 	["", "O_Heli_Transport_04_bench_F", 9000, "vehicle"],
 	["", "O_Heli_Transport_04_covered_F", 9500, "vehicle"],
 	["", "B_Heli_Transport_03_unarmed_F", 10000, "vehicle"], // CH-47
-	["", 10000, "vehicle"], // AW101
+	["", "I_Heli_Transport_02_F", 10000, "vehicle"], // AW101
 
 	["", "O_Heli_Transport_04_medevac_F",12500, "vehicle"],
 	["", "O_Heli_Transport_04_repair_F", 15000, "vehicle"],
