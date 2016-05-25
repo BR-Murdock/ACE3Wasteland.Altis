@@ -81,6 +81,8 @@ if (isServer) then
 if (hasInterface || isServer) then
 {
 	//init 3rd Party Scripts
+	[] execVM "VCOMAI\init.sqf";
+	[] execVM "VCOM_Driving\init.sqf";
 	[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 	[] execVM "addons\proving_ground\init.sqf";
 	[] execVM "addons\laptop\init.sqf";                   // Addon for hack laptop mission
