@@ -69,7 +69,7 @@ must include credits to the author (J.Shock).
 				_head = JSHK_headArrWest call BIS_fnc_selectRandom;
 				_vest = JSHK_vestArrWest call BIS_fnc_selectRandom;
 				_goggle = JSHK_goggleArrWest call BIS_fnc_selectRandom;
-			//	_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
+				_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
         		};
         	case East:
 			{
@@ -79,7 +79,7 @@ must include credits to the author (J.Shock).
 				_head = JSHK_headArrEast call BIS_fnc_selectRandom;
 				_vest = JSHK_vestArrEast call BIS_fnc_selectRandom;
 				_goggle = JSHK_goggleArrEast call BIS_fnc_selectRandom;
-			//	_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
+				_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
         		};
         	case GUER:
 			{
@@ -89,7 +89,7 @@ must include credits to the author (J.Shock).
 				_head = JSHK_headArrGuer call BIS_fnc_selectRandom;
 				_vest = JSHK_vestArrGuer call BIS_fnc_selectRandom;
 				_goggle = JSHK_goggleArrGuer call BIS_fnc_selectRandom;
-			//	_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
+				_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
         		};
         	default 
         		{
