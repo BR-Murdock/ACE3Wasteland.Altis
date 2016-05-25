@@ -55,15 +55,46 @@ must include credits to the author (J.Shock).
 	};
 
 //The redressing process...
-	
+//Edit to change gear depending on unitSide
+
 	{
-		_uniform = JSHK_uniformArr call BIS_fnc_selectRandom;
-		_weapon = JSHK_weaponArr call BIS_fnc_selectRandom;
-		_backpack = JSHK_backpackArr call BIS_fnc_selectRandom;
-		_head = JSHK_headArr call BIS_fnc_selectRandom;
-		_vest = JSHK_vestArr call BIS_fnc_selectRandom;
-		_goggle = JSHK_goggleArr call BIS_fnc_selectRandom;
-		_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
+	switch (_unitSide) do
+		{
+		case WEST:
+			{
+				_uniform = JSHK_uniformArrWest call BIS_fnc_selectRandom;
+				_weapon = JSHK_weaponArrWest call BIS_fnc_selectRandom;
+				_backpack = JSHK_backpackArrWest call BIS_fnc_selectRandom;
+				_head = JSHK_headArrWest call BIS_fnc_selectRandom;
+				_vest = JSHK_vestArrWest call BIS_fnc_selectRandom;
+				_goggle = JSHK_goggleArrWest call BIS_fnc_selectRandom;
+				_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
+        		};
+        	case East:
+			{
+				_uniform = JSHK_uniformArrEast call BIS_fnc_selectRandom;
+				_weapon = JSHK_weaponArrEast call BIS_fnc_selectRandom;
+				_backpack = JSHK_backpackArrEast call BIS_fnc_selectRandom;
+				_head = JSHK_headArrEast call BIS_fnc_selectRandom;
+				_vest = JSHK_vestArrEast call BIS_fnc_selectRandom;
+				_goggle = JSHK_goggleArrEast call BIS_fnc_selectRandom;
+				_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
+        		};
+        	case GUER:
+			{
+				_uniform = JSHK_uniformArrGuer call BIS_fnc_selectRandom;
+				_weapon = JSHK_weaponArrGuer call BIS_fnc_selectRandom;
+				_backpack = JSHK_backpackArrGuer call BIS_fnc_selectRandom;
+				_head = JSHK_headArrGuer call BIS_fnc_selectRandom;
+				_vest = JSHK_vestArrGuer call BIS_fnc_selectRandom;
+				_goggle = JSHK_goggleArrGuer call BIS_fnc_selectRandom;
+				_muzzles = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "muzzles"); 
+        		};
+        	default 
+        		{
+        		};
+        	};
+        	
         _unit = _x;
 
 		_x unassignItem "NVGoggles_OPFOR";
