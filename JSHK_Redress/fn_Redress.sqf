@@ -2,7 +2,7 @@
 
 Author: J.Shock
 Editor: BR-Murdock
-
+and:	zimm794
 Function File: fn_Redress.sqf
 
 Parameters:
@@ -119,7 +119,7 @@ must include credits to the author (J.Shock).
 		_x addMagazines ["HandGrenade", 3];
 		_x addMagazines ["SmokeShell", 3];
 
-		{ 
+		
 			if (_x=="this") then 
 			{
 				_mags = getArray(configfile >> "cfgWeapons" >> (_weapon) >> "magazines"); 
@@ -134,7 +134,7 @@ must include credits to the author (J.Shock).
 					_unit addMagazines [_x, 10]; 
 				} forEach [_mags select 0]; 
 			}; 
-		} forEach _muzzles;  
+ 
 
 		_x addWeapon _weapon;
 		_x setVariable ["JSHK_doneRedress",true];
