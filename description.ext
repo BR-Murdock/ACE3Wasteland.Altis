@@ -72,6 +72,7 @@ class CfgFunctions
 		#include "client\CfgFunctions.hpp"
 		#include "server\CfgFunctions.hpp"
 	};
+	 #include "JSHK_Redress\cfgfunctions.hpp" 
 };
 
 class CfgNotifications
