@@ -81,6 +81,7 @@ if (isServer) then
 if (hasInterface || isServer) then
 {
 	//init 3rd Party Scripts
+	[EAST, true, true] execVM "JSHK_Redress\redressInit.sqf";	//Redress script. Not sure if here or in server/init.sqf
 	[] execVM "VCOMAI\init.sqf";
 	[] execVM "VCOM_Driving\init.sqf";
 	[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
