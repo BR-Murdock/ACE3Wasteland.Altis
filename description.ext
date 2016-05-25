@@ -19,13 +19,13 @@ class Header
 {
 	gameType=Sandbox;
 	minPlayers=1;
-	maxPlayers=145; // 144 players, 1 headless client
+	maxPlayers=70; // 70 players
 };
-author="AgentRev - A3Wasteland.com"; // it would be if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
-onLoadName = "A3Wasteland Altis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
-onLoadMission = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
-overviewText = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
-overviewTextLocked = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
+author="BR-ScriptTeam - A3Wasteland.com"; // it would be if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
+onLoadName = "Escobars Legacy - ACE A3Wasteland"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+onLoadMission = "After Escobar's death, Los Pepes, the DEA and the rest of the Medellin-Cartel fight for final victory ..";
+overviewText = "After Escobar's death, Los Pepes, the DEA and the rest of the Medellin-Cartel fight for final victory ..";
+overviewTextLocked = "After Escobar's death, Los Pepes, the DEA and the rest of the Medellin-Cartel fight for final victory ..";
 overviewPicture = "mapConfig\Loading.jpg";
 loadScreen = "mapConfig\Loading.jpg";
 
@@ -53,7 +53,6 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "client\systems\playerMenu\dialog\respawn_dialog.hpp"
 #include "client\systems\playerMenu\dialog\teamkill_dialog.hpp"
 #include "addons\proving_ground\PG_config.hpp"
-//#include "addons\outlw_magrepack\config.hpp"
 #include "client\systems\hud\dialog\downloadData.hpp"
 
 class RscTitles
