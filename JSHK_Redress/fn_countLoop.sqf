@@ -1,7 +1,7 @@
 /*////////////////////////////////////
 
 Author: J.Shock
-
+Editor: BR-Murdock
 Function File: fn_countLoop.sqf
 
 Parameters:
@@ -10,7 +10,7 @@ Parameters:
 
 Description: A loop that counts all units, then the new units are 
 			 pushed back, and fn_Redress.sqf is called.
-			 
+	Edit to support three factions. Credits go to J.Shock for his script.		 
 Return: None
 
 **DISCLAIMER**
@@ -28,8 +28,9 @@ _toBeDressed = [];
 
 sleep 5;
 
+//Edit to exclude CIVs and support the 3 other sides.
 {
-	if (!(_x getVariable ["JSHK_doneRedress",false]) && {side _x isEqualTo _side} && {!((faction _x) in _faction)}) then
+	if (!(_x getVariable ["JSHK_doneRedress",false]) && {side _x =! CIV} && {!((faction _x) in _faction)}) then
 	{
 		_toBeDressed pushBack _x;
 	};
