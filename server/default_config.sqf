@@ -8,7 +8,7 @@
 // This file is overriden by the external file "A3Wasteland_settings\main_config.sqf" if present
 
 // General settings
-A3W_teamPlayersMap = 1;            // Show all friendly players on the map at all times, regardless of difficulty level (0 = no, 1 = yes)
+A3W_teamPlayersMap = 0;            // Show all friendly players on the map at all times, regardless of difficulty level (0 = no, 1 = yes)
 A3W_disableGlobalVoice = 1;        // Auto-switch channel to Direct communication whenever broadcasting voice on global, unless being admin (0 = no, 1 = yes)
 A3W_uavControl = "group";          // Restrict connection to UAVs based on ownership ("owner", "group", "side")
 
@@ -21,16 +21,16 @@ A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 // Player settings
 A3W_startingMoney = 100;           // Amount of money that players start with
 A3W_survivalSystem = 0;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
-A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
+A3W_unlimitedStamina = 0;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
 //A3W_bleedingTime = 60;           // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds) - no effect in ACE Medical
 
 // Spawn settings
 A3W_townSpawnCooldown = 5*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
 A3W_spawnBeaconCooldown = 5*60;    // Number of seconds to wait between each use of a specific spawn beacon (0 = disabled)
-A3W_spawnBeaconSpawnHeight = 1500; // Altitude in meters at which players will spawn when using spawn beacons (0 = ground/sea)
+A3W_spawnBeaconSpawnHeight = 1200; // Altitude in meters at which players will spawn when using spawn beacons (0 = ground/sea)
 
 // Antihack settings
-A3W_antiHackUnitCheck = 1;         // Detect players who spawn unauthorized AI units (0 = no, 1 = yes) - disable if you have custom unit scripts/mods like AI recruitment or ALiVE
+A3W_antiHackUnitCheck = 0;         // Detect players who spawn unauthorized AI units (0 = no, 1 = yes) - disable if you have custom unit scripts/mods like AI recruitment or ALiVE
 A3W_antiHackMinRecoil = 1.0;       // Mininum recoil coefficient enforced by the antihack (recommended values: default = 1.0, TMR Mod = 0.5, VTS Weapon Resting = 0.25) (minimum: 0.02)
 
 // Store settings
@@ -64,14 +64,14 @@ A3W_staticWeaponSaving = 1;        // Save locked static weapons and their magaz
 A3W_warchestSaving = 1;            // Save warchest objects deployed by players between server restarts (0 = no, 1 = yes)
 A3W_warchestMoneySaving = 1;       // Save warchest team money between server restarts (0 = no, 1 = yes)
 A3W_spawnBeaconSaving = 1;         // Save spawn beacons between server restarts (0 = no, 1 = yes)
-A3W_objectLifetime = 5*24;         // Maximum lifetime in hours for saved objects (baseparts, crates, etc. except vehicles) across server restarts (0 = no time limit)
+A3W_objectLifetime = 14*24;       // Maximum lifetime in hours for saved objects (baseparts, crates, etc. except vehicles) across server restarts (0 = no time limit)
 A3W_vehicleLifetime = 0;           // Maximum lifetime in hours for saved vehicles across server restarts, regardless of usage (0 = no time limit)
-A3W_vehicleMaxUnusedTime = 2*24;   // Maximum parking time in hours after which unused saved vehicles will be marked for deletion (0 = no time limit)
+A3W_vehicleMaxUnusedTime = 7*24;   // Maximum parking time in hours after which unused saved vehicles will be marked for deletion (0 = no time limit)
 A3W_serverSavingInterval = 1*60;   // Interval in seconds between automatic vehicle & object saves; should be kept at 1 min for profileNamespace and iniDB, while for extDB it can be relaxed to 3-5 mins
 
 // iniDB settings
-PDB_PlayerFileID = "A3W_";         // Player savefile prefix (if you run multiple servers, keep it the same for all of them)
-PDB_ObjectFileID = "A3W_";         // Object savefile prefix (if you run multiple servers, change it to a unique value for each server)
+PDB_PlayerFileID = "Escobars_";         // Player savefile prefix (if you run multiple servers, keep it the same for all of them)
+PDB_ObjectFileID = "Escobars_";         // Object savefile prefix (if you run multiple servers, change it to a unique value for each server)
 
 // extDB settings
 A3W_extDB_ServerID = 1;            // Server ID to use in the database for the particular server running off this config file; if you have multiple servers, they all need different IDs
@@ -109,14 +109,14 @@ A3W_boatSpawning = 1;              // If serverSpawning = 1, spawn boats at mark
 A3W_heliSpawning = 1;              // If serverSpawning = 1, spawn helicopters in some towns and airfields (0 = no, 1 = yes)
 A3W_planeSpawning = 1;             // If serverSpawning = 1, spawn planes at some airfields (0 = no, 1 = yes)
 A3W_boxSpawning = 0;               // If serverSpawning = 1, spawn weapon crates in 50% towns (0 = no, 1 = yes)
-A3W_baseBuilding = 1;              // If serverSpawning = 1, spawn base parts in towns (0 = no, 1 = yes)
+A3W_baseBuilding = 0;              // If serverSpawning = 1, spawn base parts in towns (0 = no, 1 = yes)
 A3W_essentialsSpawning = 0;        // If serverSpawning = 1, spawn essential items (food sacks, water barrels, minor supply crates) in towns (0 = no, 1 = yes)
 
 // Loot settings
 A3W_buildingLootWeapons = 0;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)
 A3W_buildingLootSupplies = 1;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
 A3W_buildingLootChances = 25;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
-A3W_vehicleLoot = 2;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
+A3W_vehicleLoot = 1;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
 
 // Territory settings
 A3W_territoryCaptureTime = 3*60;   // Time in seconds needed to capture a territory
@@ -126,11 +126,11 @@ A3W_payrollAmount = 100;           // Amount of money rewarded per territory on 
 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
-A3W_missionsDifficulty = 0;        // Missions difficulty (0 = normal, 1 = hard)
+A3W_missionsDifficulty = 1;        // Missions difficulty (0 = normal, 1 = hard)
 A3W_missionFarAiDrawLines = 1;     // Draw small red lines on the map from mission markers to individual units & vehicles which are further away than 75m from the objective (0 = no, 1 = yes)
 A3W_missionsQuantity = 6;          // Number of missions running at the same time (0 to 6)
 A3W_heliPatrolMissions = 1;        // Enable missions involving flying helicopters piloted by AI (0 = no, 1 = yes)
-A3W_underWaterMissions = 1;        // Enable underwater missions which require diving gear (0 = no, 1 = yes)
+A3W_underWaterMissions = 0;        // Enable underwater missions which require diving gear (0 = no, 1 = yes)
 A3W_mainMissionDelay = 10*60;      // Time in seconds between Main Missions
 A3W_mainMissionTimeout = 60*60;    // Time in seconds that a Main Mission will run for, unless completed
 A3W_sideMissionDelay = 5*60;       // Time in seconds between Side Missions
