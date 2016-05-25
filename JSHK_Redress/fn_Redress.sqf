@@ -1,6 +1,7 @@
 /*////////////////////////////////////
 
 Author: J.Shock
+Editor: BR-Murdock
 
 Function File: fn_Redress.sqf
 
@@ -11,7 +12,7 @@ Parameters:
 	4- Loop through units: (boolean)
 
 Description: The redressing process of the defined units.
-
+	Edit to support three factions. Credits go to J.Shock for his script.
 Return: None
 
 **DISCLAIMER**
