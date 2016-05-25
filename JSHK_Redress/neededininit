@@ -1,5 +1,0 @@
-//this line has to be added to the init.sqf
-//not sure though which init: root-init or server-init
-//in my opinion definetly NOT the client-init
-
-[WEST, false, true] execVM "JSHK_Redress\redressInit.sqf";
